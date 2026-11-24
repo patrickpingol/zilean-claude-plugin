@@ -1,0 +1,20 @@
+{
+  "name": "zilean",
+  "version": "4.4.0",
+  "description": "Connect Claude Code to a Zilean instance over MCP with browser sign-in, pause and resume its automation from slash commands, and wait for running work to drain before maintenance.",
+  "author": {
+    "name": "Patrick Pingol"
+  },
+  "homepage": "https://github.com/patrickpingol/zilean-claude-plugin",
+  "repository": "https://github.com/patrickpingol/zilean-claude-plugin",
+  "license": "MIT",
+  "keywords": ["zilean", "scheduler", "mcp", "automation-pause", "maintenance", "deploy"],
+  "userConfig": {
+    "url": {
+      "type": "string",
+      "title": "Zilean MCP endpoint URL",
+      "description": "The full MCP endpoint of your Zilean instance, for example https://zilean.example.com/mcp. Do not include a token: a browser window opens for sign-in.",
+      "required": true
+    }
+  }
+}

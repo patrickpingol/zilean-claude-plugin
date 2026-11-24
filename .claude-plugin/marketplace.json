@@ -1,0 +1,16 @@
+{
+  "name": "zilean",
+  "owner": {
+    "name": "patrickpingol"
+  },
+  "description": "Claude Code plugin for Zilean, a self-hosted job scheduler: pause and resume automation and wait for running work to drain before maintenance.",
+  "plugins": [
+    {
+      "name": "zilean",
+      "source": "./",
+      "description": "Connect to a Zilean instance over MCP with browser sign-in, pause and resume its automation from slash commands, and run a maintenance window that waits for running work to drain.",
+      "category": "productivity",
+      "keywords": ["zilean", "scheduler", "mcp", "automation-pause", "maintenance", "deploy"]
+    }
+  ]
+}

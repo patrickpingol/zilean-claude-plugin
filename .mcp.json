@@ -2,7 +2,7 @@
   "mcpServers": {
     "zilean": {
       "type": "http",
-      "url": "${user_config.url}"
+      "url": "${user_config.url}/mcp"
     }
   }
 }

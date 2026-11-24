@@ -6,7 +6,7 @@ MCP with browser sign-in (OAuth), adds three slash commands to pause and
 resume the instance's automation, and adds a skill that opens a maintenance
 window: it pauses, then waits until no run is in flight.
 
-No token is stored anywhere. You enter the instance's MCP endpoint URL once,
+No token is stored anywhere. You enter the instance's base URL once,
 and a browser window opens for sign-in.
 
 ## Requirements
@@ -29,8 +29,11 @@ and a browser window opens for sign-in.
 /plugin install zilean@zilean
 ```
 
-Claude Code asks for the **Zilean MCP endpoint URL**. Enter the full endpoint,
-for example `https://zilean.example.com/mcp`. Do not add a token.
+Claude Code asks for the **Zilean base URL**. Enter the instance's address with
+`https://` and no trailing slash or path, for example
+`https://zilean.example.com`. The plugin adds `/mcp`, and a trailing slash
+would make the address `https://zilean.example.com//mcp`, which fails. Do not
+add a token.
 
 Then sign in:
 
@@ -81,7 +84,7 @@ For deploy automation, sign in as a user whose role holds only
 - **OAuth only.** This plugin does not use static MCP tokens. To connect with
   a token, follow [Issuing a token](https://zilean.dev/guides/mcp/#issuing-a-token)
   in the Zilean docs instead.
-- **One instance per machine.** The plugin has a single endpoint URL. To
+- **One instance per machine.** The plugin has a single base URL. To
   talk to a second instance, add it manually as a separate MCP server.
 - **Local sessions only.** Cloud sessions (claude.ai/code) do not load
   plugins installed on your machine.
@@ -120,6 +123,9 @@ Not yet verified:
 - [ ] `allowed-tools: Bash(sleep 30)` pre-approves the wait command, so the
       maintenance skill raises no permission prompt while waiting (the live
       check had nothing running, so no wait happened).
+- [ ] A base URL with `/mcp` appended by the plugin
+      (`${user_config.url}/mcp`) connects and signs in. The live check used a
+      full endpoint URL.
 - [ ] What Claude Code does when the URL is not set.
 - [ ] The failure a user without `settings:pause` sees from `/zilean:pause`.
 

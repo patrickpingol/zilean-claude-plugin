@@ -12,8 +12,8 @@
   "userConfig": {
     "url": {
       "type": "string",
-      "title": "Zilean MCP endpoint URL",
-      "description": "The full MCP endpoint of your Zilean instance, for example https://zilean.example.com/mcp. Do not include a token: a browser window opens for sign-in.",
+      "title": "Zilean base URL",
+      "description": "The address of your Zilean instance, for example https://zilean.example.com. Include https:// and leave off any trailing slash or path: the plugin adds /mcp. Do not include a token: a browser window opens for sign-in.",
       "required": true
     }
   }

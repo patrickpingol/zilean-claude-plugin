@@ -117,16 +117,20 @@ Checked with Claude Code 2.1.331 against a Zilean instance that offers the
       pause records that user as its actor, on the `mcp` channel, with the
       client "Claude Code" in the audit log.
 - [x] `/zilean:pause` and `/zilean:resume` are not offered to the model.
+- [x] A base URL with `/mcp` appended by the plugin
+      (`${user_config.url}/mcp`) connects and signs in (Zilean 5.0.0, the
+      plugin installed from a local marketplace).
+- [x] With the URL not set, for example when the plugin is loaded with
+      `--plugin-dir` instead of installed, the server does not appear in
+      `/mcp` (Claude Code's docs say `/plugin` lists it under Errors as an
+      unset or invalid URL). Install the plugin, or run
+      `/plugin configure zilean@zilean`, to set it.
 
 Not yet verified:
 
 - [ ] `allowed-tools: Bash(sleep 30)` pre-approves the wait command, so the
       maintenance skill raises no permission prompt while waiting (the live
       check had nothing running, so no wait happened).
-- [ ] A base URL with `/mcp` appended by the plugin
-      (`${user_config.url}/mcp`) connects and signs in. The live check used a
-      full endpoint URL.
-- [ ] What Claude Code does when the URL is not set.
 - [ ] The failure a user without `settings:pause` sees from `/zilean:pause`.
 
 ## License

@@ -11,7 +11,7 @@ and a browser window opens for sign-in.
 
 ## Requirements
 
-- Zilean 4.4.0 or later. Earlier releases do not let a signed-in connection
+- Zilean 5.0.0 or later. Earlier releases do not let a signed-in connection
   pause or resume; the commands then report that the permission is missing.
 - MCP enabled on the instance.
 - `PUBLIC_BASE_URL` set on the instance, and the instance not in demo mode.
@@ -99,8 +99,8 @@ For deploy automation, sign in as a user whose role holds only
 
 ## Releases
 
-The plugin version tracks Zilean's: version 4.4.0 of the plugin matches Zilean
-4.4.0. Tags are plain `vX.Y.Z` and match the Zilean release. Work happens on
+The plugin version tracks Zilean's: version 5.0.0 of the plugin matches Zilean
+5.0.0. Tags are plain `vX.Y.Z` and match the Zilean release. Work happens on
 `development` and moves to `main` by fast-forward.
 
 ## Verified live

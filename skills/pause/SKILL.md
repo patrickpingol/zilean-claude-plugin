@@ -34,7 +34,7 @@ Pause automation on the connected Zilean instance.
    say clearly that nothing was paused, because this connection lacks the
    `settings:pause` permission. Possible causes: the user's role lacks it, it
    was not approved at sign-in, or the instance runs a Zilean release older
-   than 4.4.0. To fix it, run `/mcp`, choose zilean, sign in again and approve
+   than 5.0.0. To fix it, run `/mcp`, choose zilean, sign in again and approve
    "pause and resume", or ask an administrator to grant the permission to the
    role. Never claim success, never retry, and never try another tool or
    another MCP server.

@@ -1,6 +1,6 @@
 {
   "name": "zilean",
-  "version": "4.4.0",
+  "version": "5.0.0",
   "description": "Connect Claude Code to a Zilean instance over MCP with browser sign-in, pause and resume its automation from slash commands, and wait for running work to drain before maintenance.",
   "author": {
     "name": "Patrick Pingol"
